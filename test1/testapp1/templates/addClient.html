@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>add client</h5>
+
+<form action="{% url 'addclient'%}" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" placeholder="name" name="name"></td>
+        </tr>
+         <tr>
+            <td>Compeny Name</td>
+            <td><input type="text" placeholder="compeny name" name="compenyName"></td>
+        </tr>
+         <tr>
+            <td>E-mail</td>
+            <td><input type="email" placeholder="email" name="email"></td>
+        </tr>
+         <tr>
+            <td>Contect Number</td>
+            <td><input type="text" placeholder="number" maxlength="10" name="number"></td>
+        </tr>
+         <tr>
+            <td>Adderss</td>
+            <td><input type="text" placeholder="address" name="address"></td>
+        </tr>
+<!--         <tr>-->
+<!--            <td>country</td>-->
+<!--            <td>-->
+<!--                <select name="country">-->
+<!--                    {% for temp in contry %}-->
+
+<!--                    <option value="{{temp.name}}">{{temp.name}}</option>-->
+
+
+<!--                    {% endfor %}-->
+<!--                </select>-->
+<!--            </td>-->
+<!--        </tr>-->
+         <tr>
+            <td>City</td>
+            <td>
+                <input type="text" name="city">
+<!--                <select name="city">-->
+<!--                    {% for city in citie %}-->
+
+<!--                    <option value="{{city.name}}">{{city.name}}</option>-->
+
+
+<!--                    {% endfor %}-->
+<!--                </select>-->
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="addclient">
+
+</form>
+
+<!--<table>-->
+<!--    {% for city in citie %}-->
+<!--    <tr>-->
+<!--        <td>{{city.name}}</td>-->
+<!--        <td>{{city.region}}</td>-->
+<!--    </tr>-->
+<!--    {% endfor %}-->
+<!--</table>-->
+</body>
+</html>

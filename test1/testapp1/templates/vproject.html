@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>v project</h5>
+<table border="1" cellpadding="20">
+    <tr>
+        <td>Project id</td>
+        <td>Project title</td>
+        <td>client id</td>
+        <td>Address</td>
+        <td>contect number</td>
+        <td>city</td>
+        <td>state</td>
+        <td>created</td>
+        <td>modify</td>
+    </tr>
+    {% for i in pd %}
+    <tr>
+        <td>{{i.projectid}}</td>
+        <td>{{i.projecttitle}}</td>
+        <td>{{i.clientid.clientid}}</td>
+        <td>{{i.address}}</td>
+
+        <td>{{i.contecnumber}}</td>
+        <td>{{i.cityid.name}}</td>
+        <td>{{i.state}}</td>
+        <td>{{i.created}}</td>
+        <td>{{i.modify}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>v plant</h5>
+<table border="1" cellpadding="20">
+    <tr>
+        <td>Client name</td>
+        <td>compney</td>
+        <td>email</td>
+        <td>address</td>
+        <td>plant id</td>
+        <td>title</td>
+        <td>created</td>
+        <td>modify</td>
+    </tr>
+    <tr>
+        {% for i in pd %}
+        <td>{{ i.clientid.clientname}}</td>
+        <td>{{i.clientid.compenyname}}</td>
+        <td>{{i.clientid.email}}</td>
+        <td>{{i.clientid.address}}</td>
+        <td>{{i.plantid}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.created}}</td>
+        <td>{{i.modify}}</td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+</body>
+</html>

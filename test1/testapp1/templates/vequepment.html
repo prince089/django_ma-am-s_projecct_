@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>view equepment</h5>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <td>serial number</td>
+        <td>equepment name</td>
+        <td>id</td>
+        <td>city id</td>
+        <td>plant id</td>
+        <td>status</td>
+        <td>created</td>
+        <td>modify</td>
+        <td>details</td>
+        <td>dimension</td>
+
+    </tr>
+    <tr>
+        {% for i in ed %}
+        <td>{{i.equepmentid.equepmentSerialNumbeer}}</td>
+        <td>{{i.equepmentname}}</td>
+        <td>{{i.equepmentid.equepmentid}}</td>
+        <td>{{i.equepmentid.cityid.name}}</td>
+        <td>{{i.equepmentid.plantid.title}}</td>
+        <td>{{i.equepmentid.status}}</td>
+        <td>{{i.equepmentid.created}}</td>
+        <td>{{i.equepmentid.modify}}</td>
+        <td>{{i.equepmentid.details}}</td>
+        <td>{{i.equepmentid.dimension}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

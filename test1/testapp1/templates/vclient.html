@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>client LIST</h5>
+*for test role
+
+<table border="1"cellpadding="20" >
+    <tr>
+        <td>Client id</td>
+        <td>Client name</td>
+        <td>E-mail</td>
+        <td>Phone</td>
+        <td>City id</td>
+        <td>Created</td>
+        <td>modifi</td>
+
+    </tr>
+    {% for temp in role1 %}
+    <tr>
+        <td>{{temp.clientid}}</td>
+        <td>{{temp.clientname}}</td>
+        <td>{{temp.email}}</td>
+        <td>{{temp.phone}}</td>
+        <td>{{temp.cityid}}</td>
+        <td>{{temp.created}}</td>
+        <td>{{temp.modify}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+</body>
+</html>
