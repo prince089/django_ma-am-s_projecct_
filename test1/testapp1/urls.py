@@ -5,7 +5,7 @@ urlpatterns = [
 
     path('', views.index),
     path('index',views.index),
-    path('home/',views.home),
+    path('home/',views.home,name= "home"),
     path('logout/',views.logout,name="logout"),
     path('addclient/', views.addclient, name="addclient"),
     path('addequepment/', views.addequepment, name="addequepment"),

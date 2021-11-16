@@ -5,8 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<h5>client LIST</h5>
-*for test role
+<div class="logout">
+    <form action="{% url 'home'%}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Home">
+    </form>
+</div>
+
+<center><h1>Client list</h1></center>
+
 
 <table border="1"cellpadding="20" >
     <tr>
@@ -14,9 +21,9 @@
         <td>Client name</td>
         <td>E-mail</td>
         <td>Phone</td>
-        <td>City id</td>
+        <td>City name</td>
         <td>Created</td>
-        <td>modifi</td>
+        <td>Modify</td>
 
     </tr>
     {% for temp in role1 %}
@@ -25,7 +32,7 @@
         <td>{{temp.clientname}}</td>
         <td>{{temp.email}}</td>
         <td>{{temp.phone}}</td>
-        <td>{{temp.cityid}}</td>
+        <td>{{temp.clientcity}}</td>
         <td>{{temp.created}}</td>
         <td>{{temp.modify}}</td>
     </tr>

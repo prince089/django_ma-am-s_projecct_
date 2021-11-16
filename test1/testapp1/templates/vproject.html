@@ -5,18 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-<h5>v project</h5>
+<div class="logout">
+    <form action="{% url 'home'%}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Home">
+    </form>
+</div>
+
+<center><h1>Project List</h1></center>
 <table border="1" cellpadding="20">
     <tr>
         <td>Project id</td>
         <td>Project title</td>
         <td>client id</td>
         <td>Address</td>
-        <td>contect number</td>
-        <td>city</td>
-        <td>state</td>
-        <td>created</td>
-        <td>modify</td>
+        <td>Contect number</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Created</td>
+        <td>Modify</td>
     </tr>
     {% for i in pd %}
     <tr>
@@ -26,7 +33,7 @@
         <td>{{i.address}}</td>
 
         <td>{{i.contecnumber}}</td>
-        <td>{{i.cityid.name}}</td>
+        <td>{{i.projectcity}}</td>
         <td>{{i.state}}</td>
         <td>{{i.created}}</td>
         <td>{{i.modify}}</td>

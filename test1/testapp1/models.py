@@ -64,7 +64,7 @@ class Client(models.Model):
     phone = models.IntegerField()
     address = models.CharField(max_length=100)
     #cityid = models.ForeignKey(to='cities_light.City',on_delete=models.CASCADE)
-    clientcity = models.CharField(max_length=100,null=True)
+    clientcity = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     modify = models.DateTimeField(auto_now=True)
 
@@ -74,7 +74,7 @@ class Project(models.Model):
     projecttitle = models.CharField(max_length=100)
     clientid = models.ForeignKey(Client,on_delete=models.CASCADE)
     address = models.CharField(max_length=200)
-    projectcity = models.CharField(max_length=100,null=True)
+    projectcity = models.CharField(max_length=100)
     #cityid = models.ForeignKey(to='cities_light.City', on_delete=models.CASCADE)
     contecnumber = models.IntegerField()
     state = models.IntegerField(choices=STATUS_CHOICES)
@@ -93,8 +93,9 @@ class Plant(models.Model):
 
 class EquepmentMaster(models.Model):
     equepmentSerialNumbeer = models.CharField(max_length=50)
+    equepmentname = models.CharField(max_length=50)
     equepmentid = models.AutoField(primary_key=True)
-    equepmentcity = models.CharField(max_length=100,null=True)
+    equepmentcity = models.CharField(max_length=100)
     #cityid = models.ForeignKey(to='cities_light.City', on_delete=models.CASCADE)
     plantid = models.ForeignKey(Plant,on_delete=models.CASCADE)
     status = models.IntegerField(choices=STATUS_CHOICES)
@@ -104,16 +105,17 @@ class EquepmentMaster(models.Model):
     dimension = models.CharField(max_length=50)
 
 
-class Equepmentdetails(models.Model):
-    equepmentid = models.ForeignKey(EquepmentMaster,on_delete=models.CASCADE)
-    equepmentname = models.CharField(max_length=50)
+
+# class Equepmentdetails(models.Model):
+#     equepmentid = models.ForeignKey(EquepmentMaster,on_delete=models.CASCADE)
+#     equepmentname = models.CharField(max_length=50)
 
 
 class Warehouse(models.Model):
     warehouseid = models.AutoField(primary_key=True)
     warehousename = models.CharField(max_length=30)
     address = models.CharField(max_length=100)
-    werehousecity = models.CharField(max_length=100,null=True)
+    werehousecity = models.CharField(max_length=100)
     #cityid = models.ForeignKey(to='cities_light.City', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     modify = models.DateTimeField(auto_now=True)

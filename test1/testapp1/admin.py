@@ -58,17 +58,17 @@ class userPlant(admin.ModelAdmin):
 admin.site.register(Plant,userPlant)
 
 class useEquepmentMaster(admin.ModelAdmin):
-    list_display = ('equepmentSerialNumbeer','equepmentid','equepmentcity','plantid','status','created','modify','details','dimension')
+    list_display = ('equepmentSerialNumbeer','equepmentname','equepmentid','equepmentcity','plantid','status','created','modify','details','dimension')
 
 
 admin.site.register(EquepmentMaster,useEquepmentMaster)
 
-
-class userEqEquepmentdetails(admin.ModelAdmin):
-    list_display = ('equepmentid','equepmentname')
-
-
-admin.site.register(Equepmentdetails,userEqEquepmentdetails)
+#
+# class userEqEquepmentdetails(admin.ModelAdmin):
+#     list_display = ('equepmentid','equepmentname')
+#
+#
+# admin.site.register(Equepmentdetails,userEqEquepmentdetails)
 
 
 class userwhWarehouse(admin.ModelAdmin):

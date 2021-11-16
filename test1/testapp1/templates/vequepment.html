@@ -5,34 +5,41 @@
     <title>Title</title>
 </head>
 <body>
-<h5>view equepment</h5>
+<div class="logout">
+    <form action="{% url 'home'%}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Home">
+    </form>
+</div>
 
-<table border="1" cellpadding="10">
+<center><h1>Equepment List</h1></center>
+
+<table border="1" cellpadding="20">
     <tr>
-        <td>serial number</td>
-        <td>equepment name</td>
-        <td>id</td>
-        <td>city id</td>
-        <td>plant id</td>
-        <td>status</td>
-        <td>created</td>
-        <td>modify</td>
-        <td>details</td>
-        <td>dimension</td>
+        <td>Serial number</td>
+        <td>Equepment name</td>
+        <td>Id</td>
+        <td>City Name</td>
+        <td>Plant id</td>
+        <td>Status</td>
+        <td>Created</td>
+        <td>Modify</td>
+        <td>Details</td>
+        <td>Dimension</td>
 
     </tr>
     <tr>
         {% for i in ed %}
-        <td>{{i.equepmentid.equepmentSerialNumbeer}}</td>
+        <td>{{i.equepmentSerialNumbeer}}</td>
         <td>{{i.equepmentname}}</td>
-        <td>{{i.equepmentid.equepmentid}}</td>
-        <td>{{i.equepmentid.cityid.name}}</td>
-        <td>{{i.equepmentid.plantid.title}}</td>
-        <td>{{i.equepmentid.status}}</td>
-        <td>{{i.equepmentid.created}}</td>
-        <td>{{i.equepmentid.modify}}</td>
-        <td>{{i.equepmentid.details}}</td>
-        <td>{{i.equepmentid.dimension}}</td>
+        <td>{{i.equepmentid}}</td>
+        <td>{{i.equepmentcity}}</td>
+        <td>{{i.plantid.plantid}}</td>
+        <td>{{i.status}}</td>
+        <td>{{i.created}}</td>
+        <td>{{i.modify}}</td>
+        <td>{{i.details}}</td>
+        <td>{{i.dimension}}</td>
     </tr>
     {% endfor %}
 </table>
